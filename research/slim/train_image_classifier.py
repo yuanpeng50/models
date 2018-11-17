@@ -182,7 +182,7 @@ tf.app.flags.DEFINE_string(
     'dataset_split_name', 'train', 'The name of the train/test split.')
 
 tf.app.flags.DEFINE_string(
-    'dataset_dir', None, 'The directory where the dataset files are stored.')
+    'dataset_dir', '/data/yuanpeng/obd/', 'The directory where the dataset files are stored.')
 
 tf.app.flags.DEFINE_integer(
     'labels_offset', 0,
@@ -211,21 +211,21 @@ tf.app.flags.DEFINE_integer('max_number_of_steps', None,
 #####################
 
 tf.app.flags.DEFINE_string(
-    'checkpoint_path', None,
+    'checkpoint_path', '/data/yuanpeng/obd/inception_v4.ckpt',
     'The path to a checkpoint from which to fine-tune.')
 
 tf.app.flags.DEFINE_string(
-    'checkpoint_exclude_scopes', None,
+    'checkpoint_exclude_scopes', 'InceptionV4/Logits,InceptionV4/AuxLogits/Aux_logits',
     'Comma-separated list of scopes of variables to exclude when restoring '
     'from a checkpoint.')
 
 tf.app.flags.DEFINE_string(
-    'trainable_scopes', None,
+    'trainable_scopes', 'InceptionV4/Logits,InceptionV4/AuxLogits/Aux_logits',
     'Comma-separated list of scopes to filter the set of variables to train.'
     'By default, None would train all the variables.')
 
 tf.app.flags.DEFINE_boolean(
-    'ignore_missing_vars', False,
+    'ignore_missing_vars', True,
     'When restoring a checkpoint would ignore missing variables.')
 
 FLAGS = tf.app.flags.FLAGS
