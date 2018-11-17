@@ -22,13 +22,13 @@ from datasets import cifar10
 from datasets import flowers
 from datasets import imagenet
 from datasets import mnist
-from datasets import quiz
+#from datasets import quiz
 from datasets import pj_vehicle
 
 datasets_map = {
     'cifar10': cifar10,
     'flowers': flowers,
-    'quiz': quiz,
+    #'quiz': quiz,
     'imagenet': imagenet,
     'pj_vehicle': pj_vehicle,
     'mnist': mnist,
