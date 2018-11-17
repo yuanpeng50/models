@@ -22,18 +22,21 @@ from datasets import cifar10
 from datasets import flowers
 from datasets import imagenet
 from datasets import mnist
+from datasets import quiz
+from datasets import pj_vehicle
 
 datasets_map = {
     'cifar10': cifar10,
     'flowers': flowers,
+    'quiz': quiz,
     'imagenet': imagenet,
+    'pj_vehicle': pj_vehicle,
     'mnist': mnist,
 }
 
 
 def get_dataset(name, split_name, dataset_dir, file_pattern=None, reader=None):
   """Given a dataset name and a split_name returns a Dataset.
-
   Args:
     name: String, the name of the dataset.
     split_name: A train/test split name.
@@ -41,10 +44,8 @@ def get_dataset(name, split_name, dataset_dir, file_pattern=None, reader=None):
     file_pattern: The file pattern to use for matching the dataset source files.
     reader: The subclass of tf.ReaderBase. If left as `None`, then the default
       reader defined by each dataset is used.
-
   Returns:
     A `Dataset` class.
-
   Raises:
     ValueError: If the dataset `name` is unknown.
   """
