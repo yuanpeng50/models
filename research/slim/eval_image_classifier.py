@@ -56,7 +56,7 @@ tf.app.flags.DEFINE_string(
     'dataset_split_name', 'test', 'The name of the train/test split.')
 
 tf.app.flags.DEFINE_string(
-    'dataset_dir', None, 'The directory where the dataset files are stored.')
+    'dataset_dir', '/data/yuanpeng/obd/', 'The directory where the dataset files are stored.')
 
 tf.app.flags.DEFINE_integer(
     'labels_offset', 0,
