@@ -211,7 +211,7 @@ tf.app.flags.DEFINE_integer('max_number_of_steps', None,
 #####################
 
 tf.app.flags.DEFINE_string(
-    'checkpoint_path', '/data/yuanpeng/obd/inception_v4.ckpt',
+    'checkpoint_path', '/data/yuanpeng/obd/model.ckpt',
     'The path to a checkpoint from which to fine-tune.')
 
 tf.app.flags.DEFINE_string(
