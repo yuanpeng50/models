@@ -33,7 +33,7 @@ import tensorflow as tf
 
 from datasets import dataset_utils
 
-_NUM_VALIDATION = 10000
+_NUM_VALIDATION = 4885
 
 # Seed for repeatability.
 _RANDOM_SEED = 0
