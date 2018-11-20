@@ -149,7 +149,7 @@ tf.app.flags.DEFINE_float(
     'label_smoothing', 0.0, 'The amount of label smoothing.')
 
 tf.app.flags.DEFINE_float(
-    'learning_rate_decay_factor', 0.994, 'Learning rate decay factor.')
+    'learning_rate_decay_factor', 0.99, 'Learning rate decay factor.')
 
 tf.app.flags.DEFINE_float(
     'num_epochs_per_decay', 2.0,
@@ -198,7 +198,7 @@ tf.app.flags.DEFINE_string(
     'as `None`, then the model_name flag is used.')
 
 tf.app.flags.DEFINE_integer(
-    'batch_size', 32, 'The number of samples in each batch.')
+    'batch_size', 128, 'The number of samples in each batch.')
 
 tf.app.flags.DEFINE_integer(
     'train_image_size', None, 'Train image size')
