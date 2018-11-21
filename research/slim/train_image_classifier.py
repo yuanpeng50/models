@@ -40,9 +40,9 @@ tf.app.flags.DEFINE_integer('num_clones', 1,
                             'out and learning rate decay happen per clone '
                             'epochs')
 
-#tf.app.flags.DEFINE_boolean('clone_on_cpu', False,
+tf.app.flags.DEFINE_boolean('clone_on_cpu', False,
                             #'Use CPUs to deploy clones.')
-tf.app.flags.DEFINE_boolean('clone_on_cpu', True,
+#tf.app.flags.DEFINE_boolean('clone_on_cpu', True,
                             'Use CPUs to deploy clones.')
 
 tf.app.flags.DEFINE_integer('worker_replicas', 1, 'Number of worker replicas.')
@@ -151,7 +151,7 @@ tf.app.flags.DEFINE_float(
     'label_smoothing', 0.0, 'The amount of label smoothing.')
 
 tf.app.flags.DEFINE_float(
-    'learning_rate_decay_factor', 0.99, 'Learning rate decay factor.')
+    'learning_rate_decay_factor', 0.96, 'Learning rate decay factor.')
 
 tf.app.flags.DEFINE_float(
     'num_epochs_per_decay', 2.0,
