@@ -40,10 +40,10 @@ tf.app.flags.DEFINE_integer('num_clones', 1,
                             'out and learning rate decay happen per clone '
                             'epochs')
 
-#tf.app.flags.DEFINE_boolean('clone_on_cpu', False,
-                            #'Use CPUs to deploy clones.')
-tf.app.flags.DEFINE_boolean('clone_on_cpu', True,
+tf.app.flags.DEFINE_boolean('clone_on_cpu', False,
                             'Use CPUs to deploy clones.')
+#tf.app.flags.DEFINE_boolean('clone_on_cpu', True,
+                            #'Use CPUs to deploy clones.')
 
 tf.app.flags.DEFINE_integer('worker_replicas', 1, 'Number of worker replicas.')
 
@@ -200,7 +200,7 @@ tf.app.flags.DEFINE_string(
     'as `None`, then the model_name flag is used.')
 
 tf.app.flags.DEFINE_integer(
-    'batch_size', 128, 'The number of samples in each batch.')
+    'batch_size', 32, 'The number of samples in each batch.')
 
 tf.app.flags.DEFINE_integer(
     'train_image_size', None, 'Train image size')
