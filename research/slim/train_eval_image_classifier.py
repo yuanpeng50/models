@@ -22,7 +22,7 @@ def parse_args(check=True):
     parser.add_argument('--clone_on_cpu', type=bool, default=False)
     #parser.add_argument('--clone_on_cpu', type=bool, default=True)
     parser.add_argument('--optimizer', type=str, default='rmsprop')
-    parser.add_argument('--batch_size', type=int, default=256)
+    parser.add_argument('--batch_size', type=int, default=1000)
 
     # eval
     parser.add_argument('--dataset_split_name', type=str, default='validation')
@@ -43,7 +43,7 @@ if __name__ == '__main__':
     print('change wording dir to [{0}]'.format(w_d))
     os.chdir(w_d)
 
-    step_per_epoch = 43971 // FLAGS.batch_size
+    step_per_epoch = 50000 // FLAGS.batch_size
 
     if FLAGS.checkpoint_path:
         ckpt = ' --checkpoint_path=' + FLAGS.checkpoint_path
