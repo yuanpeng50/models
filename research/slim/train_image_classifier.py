@@ -137,7 +137,7 @@ tf.app.flags.DEFINE_integer(
 
 tf.app.flags.DEFINE_string(
     'learning_rate_decay_type',
-    'fixed',
+    'exponential',
     'Specifies how the learning rate is decayed. One of "fixed", "exponential",'
     ' or "polynomial"')
 
