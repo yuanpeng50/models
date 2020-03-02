@@ -142,7 +142,7 @@ def inception_v3_base(inputs,
       # mixed: 35 x 35 x 256.
       end_point = 'Mixed_5b'
       with tf.variable_scope(end_point):
-        with tf.variable_scope('Branch_0'):
+        with tf.variable_scope('Branch_0'):#InceptionV3/Mixed_5b/Branch_0/Conv2d_0a_1x1
           branch_0 = slim.conv2d(net, depth(64), [1, 1], scope='Conv2d_0a_1x1')
         with tf.variable_scope('Branch_1'):
           branch_1 = slim.conv2d(net, depth(48), [1, 1], scope='Conv2d_0a_1x1')
@@ -189,7 +189,7 @@ def inception_v3_base(inputs,
       # mixed_2: 35 x 35 x 288.
       end_point = 'Mixed_5d'
       with tf.variable_scope(end_point):
-        with tf.variable_scope('Branch_0'):
+        with tf.variable_scope('Branch_0'):#InceptionV3/Mixed_5b/Branch_0aConv2d_0a_1x1
           branch_0 = slim.conv2d(net, depth(64), [1, 1], scope='Conv2d_0a_1x1')
         with tf.variable_scope('Branch_1'):
           branch_1 = slim.conv2d(net, depth(48), [1, 1], scope='Conv2d_0a_1x1')
